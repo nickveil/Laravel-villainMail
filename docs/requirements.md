@@ -38,7 +38,7 @@ Have fun and enjoy your day of coding!
 
 [ ] 1. There's no way to enter a new message. Create a form for that. The only valid recipients for a message should be other VMail users (no external email addresses).
 
-[ ] 2. You should be able to click on a message in the home screen to view it, reply to it, and star it.
+[X] 2. You should be able to click on a message in the home screen to view it, reply to it, and star it.
 
 [ ] 3. When a message has been read, it should no longer be highlighted on the home screen.
 
