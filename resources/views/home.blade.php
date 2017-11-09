@@ -33,11 +33,11 @@
                         </td>
                         @if ($message->is_read)
                         <td>{{ $message->sender->name }}</td>
-                        <td>{{ $message->subject }}</td>
+                        <td><a href="/messages/{{ $message->id}}">{{ $message->subject }}<a></td>
                         <td>{{ $message->created_at }}</td>
                         @else
                         <td><strong>{{ $message->sender->name }}</strong></td>
-                        <td><strong>{{ $message->subject }}</strong></td>
+                        <td><strong><a href="/messages/{{ $message->id}}">{{ $message->subject }}<a></strong></td>
                         <td><strong>{{ $message->created_at }}</strong></td>
                         @endif
                     </tr>
@@ -48,4 +48,7 @@
         </div>
     </div>
 </div>
+
+@extends('layouts.app')
 @endsection
+
