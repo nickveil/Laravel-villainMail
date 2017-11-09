@@ -48,11 +48,13 @@ class MessageController extends Controller
         $messageId = \App\Message::find($id);
         $senderId = \App\Message::find($id)->sender_id;
         $message = \App\Message::find($id)->body;
+        $created = \App\Message::find($id)->created_at;
 
         $from = \App\User::find($senderId)->name;
 
+
         
-        return view('body', compact('message', 'from', 'id'));
+        return view('body', compact('message', 'from', 'id','created'));
     }
 
     /**
