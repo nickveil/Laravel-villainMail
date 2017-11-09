@@ -26,7 +26,7 @@ class HomeController extends Controller
         $messages = \App\Message::where([
 
             ['recipient_id', '=', \Auth::user()->id],
-            ['is_read', '=', false]
+            // ['is_read', '=', false]
 
 
         ])->get();

@@ -31,9 +31,15 @@
                                 <strong>&#9734;</strong>
                             @endif
                         </td>
+                        @if ($message->is_read)
                         <td>{{ $message->sender->name }}</td>
                         <td>{{ $message->subject }}</td>
                         <td>{{ $message->created_at }}</td>
+                        @else
+                        <td><strong>{{ $message->sender->name }}</strong></td>
+                        <td><strong>{{ $message->subject }}</strong></td>
+                        <td><strong>{{ $message->created_at }}</strong></td>
+                        @endif
                     </tr>
                     @endforeach
 
